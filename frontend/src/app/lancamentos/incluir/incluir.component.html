@@ -1,0 +1,15 @@
+<div class="row mb-4 pb-3">
+  <form [formGroup]="formLancamento">
+    <div class="mb-3">
+      <label for="descricao" class="form-label">Descrição</label>
+      <input type="text" class="form-control" id="descricao" autocomplete="off" value="" formControlName="descricao" />
+    </div>
+    <div class="mb-3">
+      <label for="valor" class="form-label">Valor</label>
+      <input [inputMask]="currencyInputMask" class="form-control" id="valor" autocomplete="off"
+        formControlName="valor" />
+    </div>
+    <button type="button" class="btn btn-primary" (click)="gravar()">Gravar</button>
+    <button type="button" class="btn btn-link" (click)="cancelar()">Cancelar</button>
+  </form>
+</div>

@@ -1,0 +1,15 @@
+<div class="row mb-4 pb-3">
+  <form [formGroup]="formLancamento">
+    <div class="mb-3">
+      <label for="valor" class="form-label">Valor</label>
+      <input [inputMask]="currencyInputMask" class="form-control" id="valor" autocomplete="off"
+        formControlName="valor" />
+    </div>
+    <div class="mb-3">
+      <label for="data" class="form-label">Data</label>
+      <input id="data" class="form-control" type="date" formControlName="data" />
+    </div>
+    <button type="button" class="btn btn-primary" (click)="gravar()">Gravar</button>
+    <button type="button" class="btn btn-link" (click)="cancelar()">Cancelar</button>
+  </form>
+</div>
